@@ -35,3 +35,9 @@ button.addEventListener("click", function () {
     fetchdata();
 });
 
+document.addEventListener("keypress",function(e){
+    if(e.key === "Enter"){
+        k = getVal();
+        fetchdata();
+    }
+})
