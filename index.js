@@ -1,7 +1,8 @@
 const button = document.getElementById("btn");
+const url = "https://api.gameofthronesquotes.xyz/v1/random";
 
 function fetchdata(){
-fetch("https://api.gameofthronesquotes.xyz/v1/random",{
+fetch(x,{
            cache: "no-store",
          })
 .then(response => {
@@ -10,7 +11,7 @@ fetch("https://api.gameofthronesquotes.xyz/v1/random",{
 .then(data => {
     
     document.getElementById("main-quote").innerHTML = data.sentence ;
-    document.getElementById("character").innerHTML = data.character.name.toUpperCase();
+    document.getElementById("character").innerHTML = "- "+data.character.name.toUpperCase();
 
 });
 }
@@ -18,4 +19,13 @@ fetch("https://api.gameofthronesquotes.xyz/v1/random",{
 const load = true; 
 load ? fetchdata() : null;
 
-button.addEventListener("click",fetchdata);
+function getVal() {
+    const val = document.querySelector('input').value;
+     return url.concat(val);
+}
+
+button.addEventListener("click",function(){
+    const x = getVal();
+    fetchdata();
+});
+
