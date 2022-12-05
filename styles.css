@@ -45,8 +45,8 @@ button {
 }
 
 input{
-    width: 100%;
-    padding: 0%;
+    width: 90vw;
+    padding-left: 1%;
     width: 90vw;
     height: 40px;
     background-color: #393E46;
@@ -54,8 +54,12 @@ input{
     border-radius: 10px;   
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, 100%);
     border-color: #F2E7D5;
+    color: #F2E7D5;
+    font-family: "Rubik";
+    font-weight: 500;
+    font-size: 15px;
 }
 input::placeholder{
     color: #F2E7D5;
